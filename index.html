@@ -22,6 +22,9 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/Chart.min.js"></script>
+        
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -48,7 +51,7 @@
     <div class="jumbotron green">
       <div class="container">
         <h1>Grasmaaierclub Oudenaarde</h1>
-        <p>Heeft ook U een brandende passie voor grasmaaien en stront te gooien? Dan is de Oudenaardse grasmaaierclub waarschijnlijk iets voor U!</p>
+        <p>Heeft ook U een brandende passie voor grasmaaien en strontgooien? Dan is de Oudenaardse grasmaaierclub waarschijnlijk iets voor U!</p>
       </div>
     </div>
 	
@@ -73,10 +76,12 @@
           <p><a class="btn btn-success" href="404.htm" role="button">Zei er iemand alcohol? &raquo;</a></p>
         </div>
       </div>
+
+    <!-- Verslag 1 -->
 	  <hr>
 	  <div class="row">
 		<div class="col-md-6">
-			<img class="bannerimg img-thumbnail" src='img/banner.jpg'/>
+			<img class="bannerimg img-thumbnail" src='img/verslag1.jpg'/>
 		</div>
 		<div class="col-md-6">
 			<h2>Verslag Jaarlijkse Nachtelijke Grasmaaier Tocht</h2>
@@ -85,6 +90,91 @@
 			
 		</div>
 	  </div>
+
+    <!-- Verslag 2 -->
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Verslag Eenmalige Casino avond</h2>
+        <p>Op een troebele avond, ergens in het Gentse, werd een grootse weddenschap afgesloten: een onbenoemd lid van het bestuurscommité verbond zich ertoe een welbepaald percentage van zijn eerste loonuitkering te vergokken.</p>
+        <p>Belofte maakt schuld, en een delegatie van onze grasmaaierclub zakte af naar het idylisch gelegen Peerdeken te Zingem, waar er een aantal roemrijke casino's gevestigd zijn. Bij onze stijlvolle arrivé werden we vriendelijk onthaald door een trosje casino-medewerkers, die met veel plezier onze sportwagens parkeerden, en ons doorheen de strenge veiligheidsprocedure loodsten.</p>
+      </div>
+    <div class="col-md-6">
+        <canvas id="casinoChart" width="400" height="200" style="margin-top:20px;"></canvas>
+        <script>
+          var context = document.getElementById("casinoChart").getContext("2d");
+          context.canvas.width = 300;
+          context.canvas.height = 200;
+          var data = {
+            labels: ["€1 op rood", "€1 op rood","€150 op rood","€48 euro op rood","cash-out"],
+            datasets: [
+              {
+                label: "Winst casino avond",
+                fillColor: "rgba(16, 129, 20, 0.2)",
+                strokeColor: "rgba(16, 129, 20, 1)",
+                pointColor: "rgba(220,0,0,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [200, 199, 198, 48, 0]
+              }
+            ]
+          };
+          var casinoChart = new Chart(context).Line(data,{responsive:true,maintainAspectRatio: false});
+      </script>
+      <em>Grafische representatie van winst doorheen de avond</em>
+      </div>
+      </div>  
+      <br/>
+      <div class="row">
+        <div class="col-md-12">
+        <p>Bij het betreden van de speelhal werden we overspoeld door een golf van decadentie: champagne vloeide rijkelijk, cash geld werd vrolijk in het rond gegooid, en de zachte ogen van de vele casino babes wenkten ons naar de roulette. Prompt werden we elk een glaasje Dom Pérignon aangeboden, zoals het alle high-rollers beaamt. We werden verder in de watten gelegd door het personeel met verschillende gangen hapjes, van caviaar tot toastjes walvissenvet. En dat allemaal gratis en voor niks!</p>
+        <p>Maar goed, het was eindelijk tijd om te gokken! Wilde dromen van oneindige sommen geld en goedkope strippers kwamen ons reeds tegemoet toen we plaats namen aan de roulette-tafel. Spijtig genoeg waren er enkele technische moeilijkheden, waardoor de initiële afspraak om de volledige geldsom van €200 in te zetten niet kon worden nagekomen. Gelukkig werden we opnieuw bijgestaan door het vriendelijke personeel, en we besloten er toch maar het beste van te maken.</p>
+        <p>Onze inzetstrategie was even simpel als hij geniaal was: alles op rood. Met een tweetal test-runs van elk €1, een maximum inzet van €150 euro en een rest inzet van €48 euro, was de kans dat we met lege handen naar huis zouden gaan astronomisch klein. Ja, nu horen wij U reeds vragen: zo'n kans, hoe klein is dat eigelijk? Zou je ze zelf nemen? Euhm, ja, ons team wiskundigen en data-analisten kwamen namelijk tot de conclusie dat de kans dat we 4x op rij zouden verliezen slechts een magere 7-8% bedraagt. Het spreekt dan ook voor zich dat we niet aarzelden om te beginnen gokken, en alle vertrouwen hadden in onze feilloze strategie.</p>
+        <p>Jammerlijk genoeg moet er alsnog een fout gekropen zijn in onze zorgvuldige berekeningen, zodat het uiteindelijke resultaat zeer lichtjes verschilde van de geprojecteerde winst, zoals bovenstaande grafiek weergeeft. We willen alsnog benadrukken dat dit alles een bijzonder leerrijke ervaring was over het gevaar van dronken weddenschappen en statistische discrepantie. We nemen dit dus vast en zeker mee naar de volgende ronde. Verder hadden alle aanwezige leden ook een aantal alleraardige sleutelhangers verkregen van het immer vriendelijke personeel van het casino. Zelden zagen wij zo'n vrijgevigheid.</p>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-md-6">
+      <div class="panel panel-success">
+        <div class="panel-heading"><h4>Uiteindelijk oordeel casino</h4></div>
+        <div class="panel-body">
+        <table class="table table-striped">
+        <tr>
+          <th></th>
+          <th>Ons oordeel</th>
+          <th>Score</th>
+        </tr>
+         <tr>
+          <td>Entertainment</td>
+          <td>Een spetterende beleving en een ware rollercoaster van emoties.</td>
+          <td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+        </tr>
+         <tr>
+          <td>Service</td>
+          <td>Eerlijke, hulpzame, vriendelijke mensen. Volle punten.</td>
+          <td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></td>
+        </tr>
+        <tr>
+          <td>Versnaperingen</td>
+          <td>Wanneer men alles bij elkaar optelt, vallen deze een beetje duur uit, maar wel zéér lekker.</td>
+          <td><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></td>
+        </tr>    
+         <tr>
+          <td>Casino babes</td>
+          <td>Even triestig als T.W. zijn gezicht op het einde van de avond.</td>
+          <td><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></td>
+        </tr>
+        </table>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <p>De avond werd op een ludieke manier afgesloten in de lokale kroeg, waar de pechvogel van de avond zijn zorgen kon verdrinken in menige liters Guiness. Uiteindelijk bleken dit een aantal liters Guiness teveel te zijn, maar niemand is perfect. De grasmaaierclub dankt alle leden voor hun deelname aan dit fantastische evenement, en we hopen dat er in de toekomst nog kandidaten zijn die zich aan dit wild avontuur willen wagen.</p>
+          <p>Met het oog op kritische zelf-evualatie, sommen we hier links ook nog eventjes alle plus- en minpuntjes van de avond op. Op deze manier kunnen we op een conctructieve manier terugkijken op deze activiteit, en kunnen we in de toekomst nog efficiënter grasmaaien en strontgooien.</p>
+        </div>
+      </div>  
+
 	  <br/>
 		<div class="row">
 		<div class="col-md-12 spreuk">
@@ -100,12 +190,15 @@
       <footer>
         <p>&copy; Grasmaaierclub Oudenaarde</p>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    </div> <!-- /container -->        
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/main.js"></script>
+
+        
+
+
 
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
